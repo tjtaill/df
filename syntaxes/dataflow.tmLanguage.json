@@ -1,0 +1,68 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "dataflow",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.dataflow",
+				"match": "\\b(diagram|boundary|io|function|database)\\b"
+				},
+				{
+					"name": "keyword.operator.dataflow",
+					"match": "\\s(<-|->|=)\\s"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "constant.character.escape.dataflow",
+					"match": "\\\\."
+				},
+				{
+					"name": "string.quoted.double.dataflow",
+					"begin": "\"",
+					"end": "\""
+				},
+				{
+					"name": "string.quoted.multiline.dataflow",
+					"begin": "`",
+					"end": "`"
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+				"name": "variable.language.dataflow",
+				"match": "\\b(?i)(title|operation|data|description|threats)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+				"name":"comment.block.dataflow",
+				"begin": "\/\\*",
+				"end": "\\*\/"
+				}
+			]
+		}
+	},
+	"scopeName": "source.dataflow"
+}

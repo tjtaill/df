@@ -1,0 +1,25 @@
+{
+    "name": "df",
+    "displayName": "df",
+    "description": "dataflow diagram language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "dataflow",
+            "aliases": ["dataflow", "dataflow"],
+            "extensions": [".df"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "dataflow",
+            "scopeName": "source.dataflow",
+            "path": "./syntaxes/dataflow.tmLanguage.json"
+        }]
+    }
+}
